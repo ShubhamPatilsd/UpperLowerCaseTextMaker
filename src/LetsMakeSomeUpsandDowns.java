@@ -25,8 +25,6 @@ public class LetsMakeSomeUpsandDowns {
         directions.setBounds(75,170,500,300);
         c.add(directions);
 
-
-
         textenter=new JTextField();
         textenter.setBounds(100,100,400,25);
         c.add(textenter);
