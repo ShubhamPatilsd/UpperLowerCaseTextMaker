@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 
 public class LetsMakeSomeUpsandDowns {
     private static Container c;
@@ -8,7 +9,7 @@ public class LetsMakeSomeUpsandDowns {
     public static String toBeChanged;
     public static JLabel label;
     public static  JButton copy;
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         frame=new JFrame("Lets Make Some Ups and Downs");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
@@ -22,7 +23,7 @@ public class LetsMakeSomeUpsandDowns {
         c.add(label);
 
         JLabel directions=new JLabel("<html>I have no clue why I made this. I was bored.<br>Type the text so it can be made into the upper and lower case thing.<br>Click teh go button to do it<br>Click copy to copy the meme text to clipboard</html>",SwingConstants.CENTER);
-        directions.setBounds(75,170,500,300);
+        directions.setBounds(100,170,500,300);
         c.add(directions);
 
         textenter=new JTextField();
@@ -41,7 +42,11 @@ public class LetsMakeSomeUpsandDowns {
         copy.addActionListener(copyButton);
         c.add(copy);
 
+        JustToPutImage images=new JustToPutImage();
+        images.putImage(c);
+
         frame.setSize(600,400);
+
         frame.setVisible(true);
     }
 }
