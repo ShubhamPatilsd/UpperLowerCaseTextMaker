@@ -12,7 +12,11 @@ public class goButtonClick implements ActionListener {
         charGoChac=LetsMakeSomeUpsandDowns.toBeChanged.toCharArray();
         int counter=0;
         for(char c:charGoChac){
-            if(counter%2!=0){
+            if(c=='l'||c=='L'){
+                idklol.add(String.valueOf(c).toUpperCase());
+            } else if(c=='i' || c=='I'){
+                idklol.add(String.valueOf(c).toLowerCase());
+            }else if(counter%2!=0){
                 idklol.add(String.valueOf(c).toUpperCase());
             }else{
                 idklol.add(String.valueOf(c).toLowerCase());
